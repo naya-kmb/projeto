@@ -12,9 +12,9 @@
     lista.innerHTML = ITENS.map(function (item) {
       return (
         '<li class="card">' +
-          '<h3>' + escapar(item.nome) + '</h3>' +
-          '<p>' + escapar(item.descricao) + '</p>' +
-          '<p class="preco">' + escapar(item.preco) + '</p>' +
+          '<h3>' + escape(item.name) + '</h3>' +
+          '<p>' + escape(item.description) + '</p>' +
+          '<p class="price">' + escape(item.price) + '</p>' +
         '</li>'
       );
     }).join("");
@@ -26,19 +26,19 @@
   if (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      const nome = form.nome.value.trim();
+      const name = form.name.value.trim();
       const email = form.email.value.trim();
-      if (!nome || !email) {
-        status.textContent = "⚠ Preencha nome e e-mail.";
-        status.className = "form-status erro";
+      if (!name || !email) {
+        status.textContent = "⚠ enter your email address.";
+        status.className = "form-status error";
         return;
       }
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-        status.textContent = "⚠ E-mail inválido.";
-        status.className = "form-status erro";
+        status.textContent = "⚠ Invalid email.";
+        status.className = "form-status error";
         return;
       }
-      status.textContent = "✓ Mensagem enviada! Entraremos em contato.";
+      status.textContent = "✓ Message sent! We will contact you.";
       status.className = "form-status ok";
       form.reset();
     });

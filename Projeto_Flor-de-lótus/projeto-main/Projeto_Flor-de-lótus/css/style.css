@@ -1,0 +1,184 @@
+/* === Tokens === */
+:root {
+  --primary-color: #ffcceb;
+  --primary-dark: color-mix(in oklab, #ffc4e7 80%, rgb(255, 255, 255));
+  --bg-color: #fdfaf5;
+  --surface-color: #ffffff;
+  --text-color: #1a1a1a;
+  --muted-color: #555;
+  --border-color: #e6e1d8;
+  --radius: 12px;
+  --shadow: 0 6px 20px rgba(0,0,0,.08);
+  --max-width: 1100px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container { 
+  max-width: var(--max-width); 
+  margin: 0 auto; 
+  padding: 0 1.25rem; 
+}
+
+/* === Accessibility === */
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--primary-color); color: #fff;
+  padding: .75rem 1rem; z-index: 100;
+}
+.skip-link:focus { left: 0; }
+
+:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* === Header === */
+.site-header {
+  background: var(--surface-color);
+  border-bottom: 1px solid var(--border-color);
+  position: sticky; top: 0; z-index: 10;
+}
+
+/* Adjusted to match your 'navbar' class in HTML */
+.navbar { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 1rem 1.25rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.logo img {
+  display: block;
+}
+
+.nav-list { list-style: none; display: flex; gap: 1.25rem; margin: 0; padding: 0; }
+.nav-list a { color: var(--text-color); text-decoration: none; font-weight: 500; }
+.nav-list a:hover { color: var(--primary-color); }
+
+/* === Hero === */
+.hero {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+  color: #fff;
+  text-align: center;
+}
+.hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 0 0 .75rem; }
+.lead { font-size: 1.15rem; opacity: .95; margin: 0 auto 1.5rem; max-width: 36rem; }
+
+/* === Sections === */
+.section { padding: 3rem 0; }
+.section--alt { background: var(--surface-color); }
+.section h2 { font-size: 1.75rem; margin: 0 0 1.5rem; color: var(--primary-dark); }
+
+/* === Cards === */
+.cards {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--surface-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: transform .2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+/* CRITICAL FIX: Ensures images don't break the layout */
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.card h3 { margin: 0 0 .5rem; color: var(--primary-dark); font-size: 1.2rem; }
+.card .price { font-weight: 700; color: var(--primary-dark); }
+
+/* === Form === */
+.form { max-width: 520px; }
+.field { margin-bottom: 1rem; }
+.field label { display: block; margin-bottom: .35rem; font-weight: 500; }
+.field input, .field textarea {
+  width: 100%; padding: .65rem .85rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px; font: inherit;
+  background: var(--surface-color);
+}
+.field input:focus, .field textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-color); color: #fff;
+  padding: .85rem 1.5rem; border: 0; border-radius: 999px;
+  font-weight: 600; cursor: pointer; text-decoration: none;
+  transition: background .2s;
+}
+.btn:hover, .btn:focus { background: var(--primary-dark); }
+
+.muted { color: var(--muted-color); font-size: .9rem; }
+
+/* === Footer === */
+.site-footer {
+  background: var(--primary-dark); color: #fff;
+  padding: 1.5rem 0; text-align: center; margin-top: 2rem;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .navbar { flex-direction: column; gap: 1rem; }
+  .nav-list { flex-wrap: wrap; justify-content: center; }
+}
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
+/* 1. Corrija o Header para aceitar a sua classe 'navbar' */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+/* 2. Controle automático de todas as imagens nos cards */
+.card img {
+    width: 100%;       /* A imagem ocupará toda a largura do card */
+    height: auto;      /* Mantém a proporção sem achatar */
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* 3. Garante que as seções não fiquem coladas na borda em telas menores */
+.section {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 3rem 1.25rem;
+}

@@ -1,7 +1,7 @@
 /* === Tokens === */
 :root {
-  --cor-primaria: #9C2B6E;
-  --cor-primaria-escura: color-mix(in oklab, #9C2B6E 80%, black);
+  --cor-primaria: hsl(325, 71%, 85%);
+  --cor-primaria-escura: color-mix(in oklab, #ffc6e8 80%, rgb(255, 255, 255));
   --cor-fundo: #fdfaf5;
   --cor-superficie: #ffffff;
   --cor-texto: #1a1a1a;
@@ -106,8 +106,8 @@ body {
 .btn:hover, .btn:focus { background: var(--cor-primaria-escura); }
 .muted { color: var(--cor-muted); font-size: .9rem; }
 .form-status { margin-top: 1rem; min-height: 1.5rem; font-weight: 500; }
-.form-status.ok { color: #2e7d6b; }
-.form-status.erro { color: #b83a2d; }
+.form-status.ok { color: #0c1d19; }
+.form-status.erro { color: #5d0900; }
 
 /* === Footer === */
 .site-footer {
@@ -117,10 +117,9 @@ body {
 
 /* === Responsivo === */
 @media (max-width: 600px) {
-  .header-inner { flex-direction: column; gap: .5rem; }
+  .header-inner { flex-direction: column; gap: .4rem; }
   .nav-list { flex-wrap: wrap; justify-content: center; }
 }
-
 /* === Movimento reduzido === */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
