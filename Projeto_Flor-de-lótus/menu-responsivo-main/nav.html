@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+    <div class="logo">MeuSite</div>
+    
+    <!-- Botão para Mobile -->
+    <button class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+
+    <!-- Links do Menu -->
+    <ul class="nav-list" id="nav-list">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+    </header>
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.getElementById('nav-list');
+
+mobileMenu.addEventListener('click', () => {
+    // Alterna a classe 'active' para mostrar/esconder o menu
+    navList.classList.toggle('active');
+    
+    // Opcional: Animação simples no botão hambúrguer
+    mobileMenu.classList.toggle('is-active');
+});
+    </script>
+</body>
+</html>

@@ -15,6 +15,7 @@
       <a href="#" class="logo" aria-label="Lotus🌸Flower — página inicial">Lotus🌸Flower</a>
       <nav aria-label="Menu principal">
         <ul class="nav-list">
+          <img src="images/logo.png" alt="Lotus Flower Logo" width="100px" height="75px">
           <li><a href="#about">about</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -27,10 +28,47 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <h1 id="hero-title">Lotus🌸Flower</h1>
-        <p class="lead">Hair, makeup and beauty.</p>
+        <p class="lead">Welcome to Lotus Flower, your destination for beauty and tranquility.</p>
         <a class="btn" href="#services">View services</a>
       </div>
     </section>
+
+    </header>
+    <section id="about" class="section">
+                    <div class="carousel-container">
+
+    <!-- Slide 1 -->
+    <div class="slide fade">
+        <img src="images/banner1.jpeg" alt="Promoção 1">
+        <div class="caption">Corte + Barba por R$ 45,00 — Oferta Limitada!</div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide fade">
+        <img src="images/banner2.jpeg" alt="Promoção 2">
+        <div class="caption">Hidratação Capilar + Corte por R$ 60,00</div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide fade">
+        <img src="images/banner3.jpeg" alt="Promoção 3">
+        <div class="caption">Agende Online e ganhe 10% de desconto</div>
+    </div>
+
+    <!-- Botões de navegação -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<!-- Pontos indicativos -->
+<div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+ <script src="../js/carosel.js"></script>
+        
 
     <section id="about" class="section" aria-labelledby="about-title">
       <div class="container">
@@ -55,12 +93,12 @@
           <p id="form-help" class="muted">The fields marked with * are required.</p>
 
           <div class="field">
-            <label for="nome">Name *</label>
-            <input id="nome" name="name" type="text" required autocomplete="name" aria-required="true">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required autocomplete="name" aria-required="true">
           </div>
 
           <div class="field">
-            <label for="email">Email *</label>
+            <label for="email">Email</label>
             <input id="email" name="email" type="email" required autocomplete="email" aria-required="true">
           </div>
 

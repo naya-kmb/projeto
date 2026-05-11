@@ -12,9 +12,9 @@
     lista.innerHTML = ITENS.map(function (item) {
       return (
         '<li class="card">' +
-          '<h3>' + escape(item.name) + '</h3>' +
-          '<p>' + escape(item.description) + '</p>' +
-          '<p class="price">' + escape(item.price) + '</p>' +
+          '<h3>' + escapar(item.name) + '</h3>' +
+          '<p>' + escapar(item.description) + '</p>' +
+          '<p class="price">' + escapar(item.price) + '</p>' +
         '</li>'
       );
     }).join("");

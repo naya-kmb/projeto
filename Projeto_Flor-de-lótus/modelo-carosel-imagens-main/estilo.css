@@ -1,0 +1,70 @@
+.carousel-container {
+    max-width: 100%;
+    position: relative;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 8px; /* Cantos arredondados para um ar moderno */
+}
+
+.slide {
+    display: none; /* Esconde as imagens por padrão */
+}
+
+.slide img {
+    width: 100%;
+    height: 400px; /* Altura fixa para manter o padrão abaixo do menu */
+    object-fit: cover; /* Garante que a foto não estique */
+}
+
+/* Legenda da Promoção */
+.caption {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+/* Botões Anterior e Próximo */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    background: rgba(0,0,0,0.3);
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next { right: 0; border-radius: 3px 0 0 3px; }
+.prev:hover, .next:hover { background-color: rgba(0,0,0,0.8); }
+
+/* Pontinhos (dots) */
+.dots-container { text-align: center; padding: 10px; }
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+.active, .dot:hover { background-color: #d35400; } /* Cor de destaque (Laranja Padaria) */
+
+/* Animação Fade */
+.fade {
+    animation: fadeAnim 1.5s;
+}
+
+@keyframes fadeAnim {
+    from {opacity: .4} 
+    to {opacity: 1}
+}

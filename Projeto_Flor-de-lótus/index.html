@@ -11,7 +11,7 @@
         <h1>Lotus Flower</h1>
         <nav>
             <div class="logo">
-                <img src="images/logo.png" alt="Lotus Flower Logo">
+                <img src="images/logo.png" alt="Lotus Flower Logo" width="100px" height="75px">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -23,8 +23,45 @@
             <h2>Welcome to Lotus Flower</h2>
             <p>Your source for beauty and tranquility.</p>
             <a href="#services" class="btn">Explore Our Services</a>
+
+
     </header>
     <section id="about" class="section">
+                    <div class="carousel-container">
+
+    <!-- Slide 1 -->
+    <div class="slide fade">
+        <img src="images/banner1.jpeg" alt="Promoção 1">
+        <div class="caption">Corte + Barba por R$ 45,00 — Oferta Limitada!</div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide fade">
+        <img src="images/banner2.jpeg" alt="Promoção 2">
+        <div class="caption">Hidratação Capilar + Corte por R$ 60,00</div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide fade">
+        <img src="images/banner3.jpeg" alt="Promoção 3">
+        <div class="caption">Agende Online e ganhe 10% de desconto</div>
+    </div>
+
+    <!-- Botões de navegação -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<!-- Pontos indicativos -->
+<div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!-- Script no final do body, depois do HTML carregar -->
+<script src="../js/carosel.js"></script>
         <h2>About Us</h2>
         <div class="cards">
             <div class="card">

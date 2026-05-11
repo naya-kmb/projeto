@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Rotativo - Barbearia Zé do Camarão</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<div class="carousel-container">
+
+    <!-- Slide 1 -->
+    <div class="slide fade">
+        <img src="img/promocao-paes.jpeg" alt="Promoção 1">
+        <div class="caption">Corte + Barba por R$ 45,00 — Oferta Limitada!</div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide fade">
+        <img src="img/promocao-bolos.jpeg" alt="Promoção 2">
+        <div class="caption">Hidratação Capilar + Corte por R$ 60,00</div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide fade">
+        <img src="img/promocao-kit.jpeg" alt="Promoção 3">
+        <div class="caption">Agende Online e ganhe 10% de desconto</div>
+    </div>
+
+    <!-- Botões de navegação -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<!-- Pontos indicativos -->
+<div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<!-- Script no final do body, depois do HTML carregar -->
+<script src="carosel.js"></script>
+
+</body>
+</html>
