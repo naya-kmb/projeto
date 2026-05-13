@@ -1,126 +1,236 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cabelo, maquiagem e estética.">
-  <title>Lotus🌸flower</title>
+  <title>Lotus🌸Flower</title>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+
   <a class="skip-link" href="#content">Skip to main content</a>
 
+  <!-- HEADER -->
   <header class="site-header" role="banner">
     <div class="container header-inner">
-      <a href="#" class="logo" aria-label="Lotus🌸Flower — página inicial">Lotus🌸Flower</a>
-      <nav aria-label="Menu principal">
-        <ul class="nav-list">
-          <img src="images/logo.png" alt="Lotus Flower Logo" width="100px" height="75px">
-          <li><a href="#about">about</a></li>
+
+      <nav class="navbar">
+
+        <div class="logo">
+          <img src="images/logo.png.jpeg"
+               alt="Lotus Flower Logo"
+               width="100"
+               height="85">
+        </div>
+
+        <!-- Botão Mobile -->
+        <button class="menu-toggle" id="mobile-menu" aria-label="Open Menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+
+        <!-- Links -->
+        <ul class="nav-list" id="nav-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
       </nav>
     </div>
   </header>
 
+  <!-- MAIN -->
   <main id="content">
+
+    <!-- HERO -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="container">
         <h1 id="hero-title">Lotus🌸Flower</h1>
-        <p class="lead">Welcome to Lotus Flower, your destination for beauty and tranquility.</p>
+
+        <p class="lead">
+          Welcome to Lotus Flower, your destination for beauty and tranquility.
+        </p>
+
         <a class="btn" href="#services">View services</a>
       </div>
     </section>
 
-    </header>
-    <section id="about" class="section">
-                    <div class="carousel-container">
+    <!-- CARROSSEL -->
+    <section class="section">
 
-    <!-- Slide 1 -->
-    <div class="slide fade">
-        <img src="images/banner1.jpeg" alt="Promoção 1">
-        <div class="caption">Corte + Barba por R$ 45,00 — Oferta Limitada!</div>
-    </div>
+      <div class="carousel-container">
 
-    <!-- Slide 2 -->
-    <div class="slide fade">
-        <img src="images/banner2.jpeg" alt="Promoção 2">
-        <div class="caption">Hidratação Capilar + Corte por R$ 60,00</div>
-    </div>
+        <!-- Slide 1 -->
+        <div class="slide fade">
+          <img src="images/banner1.jpeg" alt="Promotion 1">
+        </div>
 
-    <!-- Slide 3 -->
-    <div class="slide fade">
-        <img src="images/banner3.jpeg" alt="Promoção 3">
-        <div class="caption">Agende Online e ganhe 10% de desconto</div>
-    </div>
+        <!-- Slide 2 -->
+        <div class="slide fade">
+          <img src="images/banner2.png" alt="Promotion 2">
+        </div>
 
-    <!-- Botões de navegação -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        <!-- Slide 3 -->
+        <div class="slide fade">
+          <img src="images/banner3.jpeg" alt="Promotion 3">
+        </div>
 
-</div>
+        <!-- Navegação -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-<!-- Pontos indicativos -->
-<div class="dots-container">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-</div>
- <script src="../js/carosel.js"></script>
-        
+      </div>
 
+      <!-- Pontos -->
+      <div class="dots-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+    </section>
+
+    <!-- ABOUT -->
     <section id="about" class="section" aria-labelledby="about-title">
+
       <div class="container">
+
         <h2 id="about-title">About Us</h2>
-        <p>We are Lotus flower. We have been serving with care for a long time. Edit this text to tell the true story of the client.</p>
+
+        <p>
+          We are Lotus Flower. We have been serving with care for a long time.
+          Edit this text to tell the true story of the client.
+        </p>
+
       </div>
     </section>
 
-    <section id="services" class="section section--alt" aria-labelledby="services-title">
+    <!-- SERVICES -->
+    <section id="services"
+             class="section section--alt"
+             aria-labelledby="services-title">
+
       <div class="container">
+
         <h2 id="services-title">Services</h2>
-        <ul class="cards" id="lista-itens" aria-live="polite">
-          <!-- Itens injetados via JS a partir de js/dados.js -->
+
+        <ul class="cards"
+            id="lista-itens"
+            aria-live="polite">
+
+          <!-- Itens via JS -->
+
         </ul>
+
       </div>
     </section>
 
-    <section id="contact" class="section" aria-labelledby="contact-title">
+    <!-- CONTACT -->
+    <section id="contact"
+             class="section"
+             aria-labelledby="contact-title">
+
       <div class="container">
+
         <h2 id="contact-title">Contact Us</h2>
-        <form class="form" novalidate aria-describedby="form-help">
-          <p id="form-help" class="muted">The fields marked with * are required.</p>
+
+        <form class="form"
+              novalidate
+              aria-describedby="form-help">
+
+          <p id="form-help" class="muted">
+            The fields marked with * are required.
+          </p>
 
           <div class="field">
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" required autocomplete="name" aria-required="true">
+
+            <input id="name"
+                   name="name"
+                   type="text"
+                   required
+                   autocomplete="name">
           </div>
 
           <div class="field">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" required autocomplete="email" aria-required="true">
+
+            <input id="email"
+                   name="email"
+                   type="email"
+                   required
+                   autocomplete="email">
           </div>
 
           <div class="field">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4"></textarea>
+
+            <textarea id="message"
+                      name="message"
+                      rows="4"></textarea>
           </div>
 
-          <button type="submit" class="btn">Send</button>
-          <p id="form-status" role="status" class="form-status"></p>
+          <button type="submit" class="btn">
+            Send
+          </button>
+
+          <p id="form-status"
+             role="status"
+             class="form-status"></p>
+
         </form>
+
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
+
     <div class="container">
-      <p>© <span id="ano"></span> Lotus🌸Flower - site made by Nexora Domus.
+
+      <p>
+        © <span id="ano"></span>
+        Lotus🌸Flower - site made by Nexora Domus.
+      </p>
+
+      <a href="https://www.instagram.com/lotusflower.salao/"
+         target="_blank"
+         rel="noopener">
+        Instagram
+      </a>
+
+      <div class="map-container">
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d29238.669308283806!2d-46.779302114160316!3d-23.6461272535673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1zdm9jYcOnw6Nv!5e0!3m2!1spt-BR!2sbr!4v1778698879002!5m2!1spt-BR!2sbr"
+          width="600"
+          height="450"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+      </div>
+
     </div>
+
   </footer>
 
+  <!-- SCRIPTS -->
+  <script src="js/carosel.js"></script>
   <script src="js/dados.js"></script>
+  <script src="js/menu.js"></script>
   <script src="js/app.js"></script>
+
 </body>
 </html>
